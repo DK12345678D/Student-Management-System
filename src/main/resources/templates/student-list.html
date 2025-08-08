@@ -45,8 +45,8 @@
 					<a th:if="!${temp.passport}" th:href="@{'/passports/add?id='+${temp.id}}">Add Passport</a>
 				<td>
 					<a th:href="@{'/students/'+${temp.id}+'/courses'}">
-						<p th:if="${temp.courses.isEmpty()}">Add Courses</p>
-						<p th:if="!${temp.courses.isEmpty()}">View Courses</p>
+						<p th:if="${temp.courses.isEmpty()}" class="btn btn-primary btn-sm mb-3">Add Courses</p>
+						<p th:if="!${temp.courses.isEmpty()}" class="btn btn-primary btn-sm mb-3">View Courses</p>
 					</a>
 					
 				</td>

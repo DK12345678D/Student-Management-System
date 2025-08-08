@@ -46,7 +46,7 @@
 				<td th:text="${temp.id}" />
 				<td th:text="${temp.name}" />
 				<td>
-					<a th:href="@{'/courses/'+${temp.id}}">View Course</a>
+					<a th:href="@{'/courses/'+${temp.id}}" class="btn btn-primary btn-sm mb-3">View Course</a>
 				</td>
 				<td th:if="${add_id!=null||remove_id!=null}">
 					<a th:if="${remove_id!=null}" th:href="@{'/students/'+${remove_id}+'/removeCourse?cid='+${temp.id}}">Remove Course</a>

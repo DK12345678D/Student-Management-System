@@ -49,7 +49,7 @@
 				<td th:text="${temp.rating}" />
 				<td th:text="${temp.description}" />
 				<td>
-					<a th:href="@{'/reviews/remove?id='+${temp.id}+'&cid='+${course.id}}">Remove Review</a>
+					<a th:href="@{'/reviews/remove?id='+${temp.id}+'&cid='+${course.id}}" class="btn btn-primary btn-sm mb-3">Remove Review</a>
 				</td>
 			</tr>
 		</tbody>		

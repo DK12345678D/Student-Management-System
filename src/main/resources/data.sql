@@ -1,5 +1,5 @@
-insert into student(id, name) values(10, 'Adi');
-insert into student(id, name) values(20, 'Ksh');
+insert into student(id, name) values(10, 'Dinkar');
+insert into student(id, name) values(20, 'Dileep');
 
 insert into course(id, name) values(10, 'Java');
 insert into course(id, name) values(20, 'Python');
