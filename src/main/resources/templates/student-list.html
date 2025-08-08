@@ -31,7 +31,7 @@
 			<tr>
 				<th>Id</th>
 				<th>Student Name</th>
-				<th>Passport</th>
+				<th>Contact</th>
 				<th>Courses</th>
 			</tr>
 		</thead>
@@ -42,7 +42,7 @@
 				<td th:text="${temp.name}" />
 				<td>
 					<p th:if="${temp.passport}" th:text="${temp.passport.number}" />
-					<a th:if="!${temp.passport}" th:href="@{'/passports/add?id='+${temp.id}}">Add Passport</a>
+					<a th:if="!${temp.passport}" th:href="@{'/passports/add?id='+${temp.id}}">Add Contact</a>
 				<td>
 					<a th:href="@{'/students/'+${temp.id}+'/courses'}">
 						<p th:if="${temp.courses.isEmpty()}" class="btn btn-primary btn-sm mb-3">Add Courses</p>
