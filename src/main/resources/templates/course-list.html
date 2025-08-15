@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<head>
+<head th:replace="header ::head">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,19 +13,19 @@
 </head>
 
 <body>
-
+<div th:replace="header ::Header"></div>
 <div class="container">
 
 	<h3>Course List</h3>
 	<hr>
 	
 	<a th:if=${id} th:href="@{'/students/'+${id}+'/addCourses'}" 
-			class="btn btn-primary btn-sm mb-3">
+			class="btn btn-success btn-sm mb-3">
 			Add Courses
 	</a>
 	
 	<a th:href="@{'/courses/add'}" 
-			class="btn btn-primary btn-sm mb-3">
+			class="btn btn-success btn-sm mb-3">
 			Add New Course
 	</a>
 		
@@ -36,7 +36,7 @@
 			<tr>
 				<th>S.No</th>
 				<th>Course Name</th>
-				<th></th>
+				<th>View Course</th>
 				<th th:if="${add_id!=null||remove_id!=null}"></th>
 			</tr>
 		</thead>
@@ -46,11 +46,11 @@
 				<td th:text="${temp.id}" />
 				<td th:text="${temp.name}" />
 				<td>
-					<a th:href="@{'/courses/'+${temp.id}}" class="btn btn-primary btn-sm mb-3">View Course</a>
+					<a th:href="@{'/courses/'+${temp.id}}" class="btn btn-info btn-sm mb-3">View Course</a>
 				</td>
 				<td th:if="${add_id!=null||remove_id!=null}">
-					<a th:if="${remove_id!=null}" th:href="@{'/students/'+${remove_id}+'/removeCourse?cid='+${temp.id}}">Remove Course</a>
-					<a th:if="${add_id!=null}" th:href="@{'/students/'+${add_id}+'/addCourse?cid='+${temp.id}}">Add Course</a>
+					<a th:if="${remove_id!=null}" th:href="@{'/students/'+${remove_id}+'/removeCourse?cid='+${temp.id}}" class="btn btn-danger btn-sm mb-3">Remove Course</a>
+					<a th:if="${add_id!=null}" th:href="@{'/students/'+${add_id}+'/addCourse?cid='+${temp.id}}" class="btn btn-danger btn-sm mb-3">Add Course</a>
 				</td>
 			</tr>
 		</tbody>		
@@ -61,7 +61,7 @@
 			Back to Student List
 	</a>
 </div>
-	
+	<div th:replace="header ::Footer"></div>
 </body>
 </html>
 

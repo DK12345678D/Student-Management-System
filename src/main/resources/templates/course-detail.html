@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<head>
+<head th:replace="header ::head">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-
+<div th:replace="header ::Header"></div>
 <div class="container">
 
 	<h3>Course Details</h3>
@@ -25,7 +25,7 @@
 	</a>
 	
 	<a th:href="@{'/reviews/add?id='+${course.id}}"
-		class="btn btn-primary btn-sm mb-3">
+		class="btn btn-success btn-sm mb-3">
 		Add Review
 	</a>
 	
@@ -39,7 +39,7 @@
 				<th>S.No</th>
 				<th>Rating</th>
 				<th>Description</th>
-				<th></th>
+				<!-- <th></th> -->
 			</tr>
 		</thead>
 		
@@ -49,7 +49,7 @@
 				<td th:text="${temp.rating}" />
 				<td th:text="${temp.description}" />
 				<td>
-					<a th:href="@{'/reviews/remove?id='+${temp.id}+'&cid='+${course.id}}" class="btn btn-primary btn-sm mb-3">Remove Review</a>
+					<a th:href="@{'/reviews/remove?id='+${temp.id}+'&cid='+${course.id}}" class="btn btn-danger btn-sm mb-3">Remove Review</a>
 				</td>
 			</tr>
 		</tbody>		
@@ -60,7 +60,7 @@
 			Back to Student List
 	</a>
 </div>
-	
+<div th:replace="header ::Footer"></div>	
 </body>
 </html>
 

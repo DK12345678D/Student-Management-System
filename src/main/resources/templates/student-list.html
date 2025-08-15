@@ -1,7 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
-<head>
+<head th:replace="header :: head">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,14 +12,14 @@
 </head>
 
 <body>
-
+<div th:replace="header :: Header"></div>
 <div class="container">
 
 	<h3>Student List</h3>
 	<hr>
 	
 	<a th:href="@{/courses}" 
-			class="btn btn-primary btn-sm mb-3">
+			class="btn btn-info btn-sm mb-3">
 			View All Courses
 	</a>
 		
@@ -42,11 +41,11 @@
 				<td th:text="${temp.name}" />
 				<td>
 					<p th:if="${temp.passport}" th:text="${temp.passport.number}" />
-					<a th:if="!${temp.passport}" th:href="@{'/passports/add?id='+${temp.id}}">Add Contact</a>
+					<a th:if="!${temp.passport}" th:href="@{'/passports/add?id='+${temp.id}}" class="btn btn-success btn-sm mb-3">Add Contact</a>
 				<td>
 					<a th:href="@{'/students/'+${temp.id}+'/courses'}">
-						<p th:if="${temp.courses.isEmpty()}" class="btn btn-primary btn-sm mb-3">Add Courses</p>
-						<p th:if="!${temp.courses.isEmpty()}" class="btn btn-primary btn-sm mb-3">View Courses</p>
+						<p th:if="${temp.courses.isEmpty()}" class="btn btn-success btn-sm mb-3">Add Courses</p>
+						<p th:if="!${temp.courses.isEmpty()}" class="btn btn-info btn-sm mb-3">View Courses</p>
 					</a>
 					
 				</td>
@@ -55,12 +54,12 @@
 	</table>
 	
 	<a th:href="@{/students/add}" 
-			class="btn btn-primary btn-sm mb-3">
+			class="btn btn-success btn-sm mb-3">
 			Add new Student
 	</a>
 	
 </div>
-	
+<div th:replace="header :: Footer"></div>	
 </body>
 </html>
 
