@@ -19,7 +19,7 @@
 	<hr>
 	
 	<a th:href="@{/courses}" 
-			class="btn btn-info btn-sm mb-3">
+			class="btn btn-info btn-sm mb-3"><i class="fa-solid fa-eye"></i>
 			View All Courses
 	</a>
 		
@@ -41,11 +41,11 @@
 				<td th:text="${temp.name}" />
 				<td>
 					<p th:if="${temp.passport}" th:text="${temp.passport.number}" />
-					<a th:if="!${temp.passport}" th:href="@{'/passports/add?id='+${temp.id}}" class="btn btn-success btn-sm mb-3">Add Contact</a>
+					<a th:if="!${temp.passport}" th:href="@{'/passports/add?id='+${temp.id}}" class="btn btn-success btn-sm mb-3"><i class="fa-solid fa-phone"></i> Add Contact</a>
 				<td>
 					<a th:href="@{'/students/'+${temp.id}+'/courses'}">
-						<p th:if="${temp.courses.isEmpty()}" class="btn btn-success btn-sm mb-3">Add Courses</p>
-						<p th:if="!${temp.courses.isEmpty()}" class="btn btn-info btn-sm mb-3">View Courses</p>
+						<p th:if="${temp.courses.isEmpty()}" class="btn btn-success btn-sm mb-3"><i class="fa-solid fa-book-bible"></i> Add Courses</p>
+						<p th:if="!${temp.courses.isEmpty()}" class="btn btn-info btn-sm mb-3"><i class="fa-solid fa-eye"></i> View Courses</p>
 					</a>
 					
 				</td>
@@ -54,7 +54,7 @@
 	</table>
 	
 	<a th:href="@{/students/add}" 
-			class="btn btn-success btn-sm mb-3">
+			class="btn btn-success btn-sm mb-3"><i class="fa-solid fa-user-plus"></i> 
 			Add new Student
 	</a>
 	
