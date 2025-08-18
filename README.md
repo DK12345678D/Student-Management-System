@@ -31,11 +31,12 @@ This project allows you to perform basic **CRUD (Create, Read, Update, Delete)**
 ---
 ## 📸 Screenshot
 All Data and Home Page:
-
-![Employee Home Output](src/main/resources/templates/static/images/emph.png)
+![Student Home Output](src/main/resources/templates/images/stuh.png)
 Add Data :
-![Employee Home Output](src/main/resources/templates/static/images/addemp.png)
-Update Data :
-![Employee Home Output](src/main/resources/templates/static/images/upemp.png)
+![Student Home Output](src/main/resources/templates/images/addstu.png)
+Course Data :
+![Student Home Output](src/main/resources/templates/images/courselist.png)
+Course Data :
+![Student Home Output](src/main/resources/templates/images/coursedetails.png)
 
 ---
