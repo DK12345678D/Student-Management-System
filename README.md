@@ -6,7 +6,7 @@ This project allows you to perform basic **CRUD (Create, Read, Update, Delete)**
 ---     
    
 ## ✨ Features
-### 👩‍🎓 Student Features
+### 👩‍🎓 Student Features  
 - ➕ Add new students  
 - 📋 View student list  
 - ✏️ Update student details  
