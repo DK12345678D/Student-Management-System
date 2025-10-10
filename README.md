@@ -2,7 +2,7 @@
    
 A **full-stack Student Management System** built using **Spring Boot, Thymeleaf, MySQL, and Spring Data JPA**.  
 This project allows you to perform basic **CRUD (Create, Read, Update, Delete)** operations on student records, manage courses, and view course reviews in a simple web interface.
-  
+     
 ---               
             
 ## ✨ Features
